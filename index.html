@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Victor Hugo Vieira Tavares — Engenharia Elétrica</title>
-<meta name="description" content="Portfólio de Victor Hugo Vieira Tavares, estudante de Engenharia Elétrica na UFCG — pesquisa, monitoria, machine learning e robótica.">
+<meta name="description" content="Portfólio de Victor Hugo Vieira Tavares, estudante de Engenharia Elétrica na UFCG com foco em eletrônica de potência — pesquisa, monitoria e projetos.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -46,7 +46,7 @@
   }
   h1,h2,h3,h4{font-family:'Fraunces',serif; font-weight:600; letter-spacing:-0.012em;}
   a{color:inherit; text-decoration:none;}
-  section{position:relative; z-index:1; max-width:var(--maxw); margin:0 auto; padding:74px 24px 24px;}
+  section{position:relative; z-index:1; max-width:var(--maxw); margin:0 auto; padding:80px 24px 28px;}
 
   .eyebrow{
     display:inline-flex; align-items:center; gap:9px;
@@ -55,11 +55,13 @@
   }
   .eyebrow::before{content:""; width:22px; height:3px; border-radius:3px; background:var(--yellow);}
   h2.section-title{font-size:clamp(1.7rem,3.4vw,2.35rem); margin-bottom:8px; line-height:1.12;}
-  .section-sub{color:var(--ink-dim); max-width:600px; margin-bottom:32px; font-size:0.98rem;}
+  .section-sub{color:var(--ink-dim); max-width:600px; margin-bottom:34px; font-size:0.98rem;}
   .mark{
     background:linear-gradient(transparent 58%, var(--yellow-bright) 58%);
     padding:0 .06em; border-radius:2px;
   }
+  .sub-head{font-family:'Fraunces',serif; font-size:1.2rem; font-weight:600; margin:44px 0 6px;}
+  .sub-note{color:var(--ink-dim); font-size:0.95rem; margin-bottom:22px;}
 
   /* NAV */
   nav{
@@ -92,19 +94,17 @@
   header.hero{
     position:relative; z-index:1;
     max-width:var(--maxw); margin:0 auto;
-    padding:122px 24px 50px;
+    padding:130px 24px 56px;
     display:flex; align-items:center; gap:54px;
   }
   .hero-text{flex:1.35;}
-  .hero-greet{font-size:1.05rem; color:var(--ink-dim); font-weight:500; margin-bottom:6px;}
-  .hero-greet b{color:var(--red); font-weight:700;}
   .hero-name{font-family:'Fraunces',serif; font-weight:600; font-size:clamp(2.3rem,5.4vw,3.4rem); line-height:1.06; margin-bottom:14px;}
   .hero-role{
     display:inline-block; font-size:0.95rem; font-weight:600; color:var(--ink);
     background:var(--yellow-soft); border:1px solid rgba(244,167,33,0.4);
     padding:6px 14px; border-radius:30px; margin-bottom:20px;
   }
-  .hero-desc{color:var(--ink-dim); max-width:520px; margin-bottom:28px; font-size:1.02rem;}
+  .hero-desc{color:var(--ink-dim); max-width:520px; margin-bottom:28px; font-size:1.05rem;}
   .hero-cta{display:flex; gap:13px; flex-wrap:wrap;}
   .btn{
     display:inline-flex; align-items:center; gap:8px;
@@ -136,27 +136,21 @@
     border-radius:50%; background:var(--red); z-index:3;
     box-shadow:0 6px 16px rgba(214,52,44,0.35);
   }
-  .ph-fallback{display:none;}
 
   @media (max-width:820px){
-    header.hero{flex-direction:column-reverse; text-align:center; padding-top:104px; gap:34px;}
+    header.hero{flex-direction:column-reverse; text-align:center; padding-top:108px; gap:34px;}
     .hero-desc{margin-left:auto; margin-right:auto;}
     .hero-cta{justify-content:center;}
-    .eyebrow{ }
   }
 
-  /* SOBRE MIM */
+  /* PERFIL */
   .about-grid{display:grid; grid-template-columns:0.85fr 1.15fr; gap:40px; align-items:center;}
   .about-photo{position:relative;}
   .about-photo img{
     width:100%; border-radius:18px; display:block;
     border:4px solid #fff; box-shadow:0 16px 36px rgba(42,32,23,0.16);
   }
-  .about-photo .tape{
-    position:absolute; top:-14px; left:24px; transform:rotate(-4deg);
-    background:var(--yellow-bright); color:#5a3d00; font-weight:700; font-size:0.78rem;
-    padding:5px 16px; border-radius:4px; box-shadow:0 4px 10px rgba(0,0,0,0.12);
-  }
+  .about-photo .pcap{margin-top:12px; font-size:0.82rem; color:var(--ink-dim); font-weight:500; text-align:center;}
   .about-text p{color:var(--ink-dim); font-size:1.05rem; margin-bottom:16px;}
   .about-text p .hl{color:var(--ink); font-weight:600;}
   .facts{display:flex; flex-wrap:wrap; gap:10px; margin-top:8px;}
@@ -167,23 +161,6 @@
   }
   .fact b{color:var(--red);}
   @media (max-width:760px){ .about-grid{grid-template-columns:1fr; gap:26px;} }
-
-  /* TIMELINE */
-  .timeline{border-left:2px solid rgba(244,167,33,0.5); margin-left:6px;}
-  .tl-item{position:relative; padding:0 0 26px 30px;}
-  .tl-item::before{
-    content:""; position:absolute; left:-8px; top:4px;
-    width:14px; height:14px; border-radius:50%;
-    background:var(--red); border:3px solid var(--bg);
-  }
-  .tl-item h3{font-size:1.12rem; margin-bottom:4px;}
-  .tl-meta{font-size:0.82rem; font-weight:600; color:var(--red); margin-bottom:6px; display:block;}
-  .tl-item p{color:var(--ink-dim); font-size:0.96rem; max-width:600px;}
-  .course-pills{display:flex; flex-wrap:wrap; gap:9px; margin-top:12px;}
-  .pill{
-    background:var(--yellow-soft); color:#8a5a00; border:1px solid rgba(244,167,33,0.45);
-    padding:6px 14px; border-radius:20px; font-size:0.82rem; font-weight:500;
-  }
 
   /* CARDS */
   .grid{display:grid; gap:18px;}
@@ -224,6 +201,7 @@
     font-size:0.86rem; color:var(--red); font-weight:600;
   }
   .gh-link:hover{text-decoration:underline;}
+  .featured{border-left:4px solid var(--red); padding-left:24px;}
 
   /* PHOTO */
   .photo{
@@ -265,20 +243,21 @@
   .contact-box p{color:rgba(255,255,255,0.9); margin-bottom:28px; max-width:480px; margin-left:auto; margin-right:auto;}
   .contact-box .btn-primary{background:var(--yellow-bright); color:#5a3d00;}
   .contact-box .btn-primary:hover{background:#fff; box-shadow:0 10px 24px rgba(0,0,0,0.18);}
-  .contact-box .btn-ghost{border-color:rgba(255,255,255,0.55); color:#fff;}
-  .contact-box .btn-ghost:hover{border-color:#fff; background:rgba(255,255,255,0.12); color:#fff;}
-  footer{text-align:center; padding:30px; color:var(--ink-dim); font-size:0.84rem;}
-  footer b{color:var(--red);}
+
+  footer{text-align:center; padding:34px 24px; color:var(--ink-dim); font-size:0.84rem;}
+  .foot-links{display:flex; gap:10px 22px; justify-content:center; flex-wrap:wrap; margin-bottom:14px;}
+  .foot-links a{color:var(--ink-dim); font-weight:600; font-size:0.86rem; transition:color .2s;}
+  .foot-links a:hover{color:var(--red);}
 
   .reveal{opacity:0; transform:translateY(20px); transition:all .6s ease;}
   .reveal.visible{opacity:1; transform:translateY(0);}
 
-  .lang-row{display:flex; gap:14px; flex-wrap:wrap; margin-top:16px;}
+  .lang-row{display:flex; gap:12px; flex-wrap:wrap; margin-top:16px;}
   .lang-pill{
-    display:flex; align-items:center; gap:10px; background:var(--card);
-    border:1px solid var(--border); padding:10px 18px; border-radius:30px; font-size:0.9rem; font-weight:500;
+    display:flex; align-items:center; gap:9px; background:var(--card);
+    border:1px solid var(--border); padding:9px 16px; border-radius:30px; font-size:0.88rem; font-weight:500;
   }
-  .lang-pill .lvl{color:var(--red); font-weight:700; font-size:0.74rem; letter-spacing:0.04em;}
+  .lang-pill .lvl{color:var(--red); font-weight:700; font-size:0.72rem; letter-spacing:0.04em;}
 
   .gh-banner{text-align:center; margin-top:30px; display:flex; justify-content:center;}
   .gh-banner a{
@@ -297,11 +276,10 @@
     <div class="nav-links">
       <a href="#sobre">Sobre</a>
       <a href="#formacao">Formação</a>
-      <a href="#atuacao">Atividades</a>
+      <a href="#atuacao">Ensino</a>
       <a href="#pesquisa">Pesquisa</a>
       <a href="#github">Projetos</a>
-      <a href="#vida">Bastidores</a>
-      <a href="#certificados">Certificados</a>
+      <a href="#vida">Atividades</a>
       <a href="#contato">Contato</a>
     </div>
     <button class="nav-toggle" id="navToggle" aria-label="Abrir menu">
@@ -311,11 +289,10 @@
   <div class="nav-mobile" id="navMobile">
     <a href="#sobre">Sobre</a>
     <a href="#formacao">Formação</a>
-    <a href="#atuacao">Atividades</a>
+    <a href="#atuacao">Ensino</a>
     <a href="#pesquisa">Pesquisa</a>
     <a href="#github">Projetos</a>
-    <a href="#vida">Bastidores</a>
-    <a href="#certificados">Certificados</a>
+    <a href="#vida">Atividades</a>
     <a href="#contato">Contato</a>
   </div>
 </nav>
@@ -325,11 +302,10 @@
     <div class="eyebrow">Engenharia Elétrica · UFCG</div>
     <h1 class="hero-name">Victor Hugo Vieira Tavares</h1>
     <div class="hero-role">Foco em Eletrônica de Potência</div>
-    <p class="hero-desc">Sou estudante de Engenharia Elétrica na Universidade Federal de Campina Grande, com foco em eletrônica de potência. Atuo em pesquisa, monitoria acadêmica e no desenvolvimento de projetos que unem hardware e modelos computacionais aplicados a problemas de engenharia.</p>
+    <p class="hero-desc">Atuo nas áreas de pesquisa e extensão e tenho experiência em monitoria e ensino. Atualmente, sou bolsista no LAT.</p>
     <div class="hero-cta">
       <a class="btn btn-primary" href="mailto:victor.hugo.tavares@ee.ufcg.edu.br">Entrar em contato</a>
       <a class="btn btn-ghost" href="http://lattes.cnpq.br/9244453546077602" target="_blank" rel="noopener">Currículo Lattes</a>
-      <a class="btn btn-ghost" href="https://github.com/hugovieiraz" target="_blank" rel="noopener">GitHub</a>
     </div>
   </div>
   <div class="hero-photo-wrap reveal">
@@ -346,17 +322,23 @@
 <section id="sobre">
   <div class="about-grid">
     <div class="about-photo reveal">
-      <img src="images/welding.jpg" alt="Prática de soldagem em oficina" style="aspect-ratio:4/5; object-fit:cover;">
+      <img src="images/welding.jpg" alt="Prática de soldagem em oficina" style="aspect-ratio:4/5; object-fit:cover; object-position:center 15%;">
+      <div class="pcap">Soldagem de estrutura metálica</div>
     </div>
     <div class="about-text reveal">
-      <div class="eyebrow">Resumo</div>
+      <div class="eyebrow">01 · Sobre</div>
       <h2 class="section-title">Perfil</h2>
-      <p>Estudante de Engenharia Elétrica na UFCG, atualmente no 7º período, com interesse principal em <span class="hl">eletrônica de potência</span>. Concilio a graduação com pesquisa aplicada, monitoria acadêmica e o desenvolvimento de projetos técnicos.</p>
-      <p>Minha atuação reúne fundamentos de engenharia e ferramentas computacionais para resolver problemas reais, da bancada de laboratório à modelagem e simulação de sistemas.</p>
+      <p>Estudante de Engenharia Elétrica na Universidade Federal de Campina Grande (UFCG), no 7º período. Tenho experiência com monitoria, ensino, pesquisa e extensão, conciliando essas atividades com a graduação. Atualmente, sou bolsista no LAT.</p>
+      <p>Gosto de levar uma ideia da bancada de laboratório até a simulação e a implementação, unindo fundamentos sólidos de engenharia a ferramentas computacionais.</p>
       <div class="facts">
         <div class="fact">Campina Grande, <b>PB</b></div>
         <div class="fact">7º período · <b>UFCG</b></div>
         <div class="fact">Foco: <b>Eletrônica de Potência</b></div>
+      </div>
+      <div class="lang-row">
+        <div class="lang-pill">Português <span class="lvl">NATIVO</span></div>
+        <div class="lang-pill">Inglês <span class="lvl">B1</span></div>
+        <div class="lang-pill">Francês <span class="lvl">NOÇÕES</span></div>
       </div>
     </div>
   </div>
@@ -365,39 +347,37 @@
 <div class="divider"></div>
 
 <section id="formacao">
-  <div class="eyebrow reveal">Formação</div>
-  <h2 class="section-title reveal">Minha trajetória acadêmica</h2>
-  <p class="section-sub reveal">A graduação e os cursos que fui somando pelo caminho.</p>
+  <div class="eyebrow reveal">02 · Formação</div>
+  <h2 class="section-title reveal">Formação acadêmica</h2>
+  <p class="section-sub reveal">Graduação em andamento e certificações complementares.</p>
 
-  <div class="timeline reveal">
-    <div class="tl-item">
+  <div class="grid reveal" style="grid-template-columns:1fr;">
+    <div class="card featured">
+      <span class="badge">Graduação</span>
       <h3>Bacharelado em Engenharia Elétrica</h3>
-      <span class="tl-meta">Universidade Federal de Campina Grande (UFCG) · 2023 — atual</span>
-      <p>Cursando o 7º período, sempre conciliando a graduação com monitoria, pesquisa e extensão.</p>
+      <span class="meta">Universidade Federal de Campina Grande (UFCG) · 2023 — atual · 7º período</span>
     </div>
-    <div class="tl-item">
-      <h3>Cursos complementares</h3>
-      <span class="tl-meta">2025 — 2026</span>
-      <div class="course-pills">
-        <span class="pill">Python (Básico)</span>
-        <span class="pill">Instalações Elétricas</span>
-        <span class="pill">Comunicação Assertiva</span>
-        <span class="pill">Planejamento</span>
-        <span class="pill">Empreendedorismo</span>
-        <span class="pill">Inglês Intermediário (B1)</span>
-        <span class="pill">Fundamentos de IA</span>
-        <span class="pill">IA Aplicada</span>
-        <span class="pill">Aprendizado de Máquina</span>
-        <span class="pill">Análise de Dados</span>
-      </div>
-    </div>
+  </div>
+
+  <h3 class="sub-head reveal">Cursos e certificações</h3>
+  <p class="sub-note reveal">Capacitações concluídas recentemente.</p>
+  <div class="grid grid-3 reveal">
+    <div class="card cert-card"><h3>Fundamentos da Inteligência Artificial</h3><span class="meta">40h · mai/2026</span></div>
+    <div class="card cert-card"><h3>Inteligência Artificial Aplicada</h3><span class="meta">30h · jun/2026</span></div>
+    <div class="card cert-card"><h3>Aprendizado Avançado de Máquina</h3><span class="meta">30h · mai/2026</span></div>
+    <div class="card cert-card"><h3>Análise de Dados</h3><span class="meta">40h · jun/2026</span></div>
+    <div class="card cert-card"><h3>Comunicação Assertiva no Trabalho</h3><span class="meta">4h · nov/2025</span></div>
+    <div class="card cert-card"><h3>Inglês — Intermediário (B1)</h3><span class="meta">mai/2025</span></div>
+    <div class="card cert-card"><h3>Python Básico</h3><span class="meta">30h</span></div>
+    <div class="card cert-card"><h3>Planejamento</h3><span class="meta">8h</span></div>
+    <div class="card cert-card"><h3>Empreendedorismo</h3><span class="meta">8h</span></div>
   </div>
 </section>
 
 <div class="divider"></div>
 
 <section id="atuacao">
-  <div class="eyebrow reveal">Monitoria & Docência</div>
+  <div class="eyebrow reveal">03 · Ensino</div>
   <h2 class="section-title reveal">Monitoria e docência</h2>
   <p class="section-sub reveal">Monitorias acadêmicas e curso de robótica, em paralelo à graduação.</p>
 
@@ -407,7 +387,7 @@
       <h3>Cálculo Numérico</h3>
       <span class="meta">UFCG</span>
       <p>Montei um repositório reunindo todos os métodos numéricos da disciplina, que virou material de apoio para os outros alunos.</p>
-      <a class="gh-link" href="https://github.com/hugovieiraz/Calculo-Numerico" target="_blank" rel="noopener">↗ Ver repositório no GitHub</a>
+      <a class="gh-link" href="https://github.com/hugovieiraz/Calculo-Numerico" target="_blank" rel="noopener">↗ Ver repositório</a>
     </div>
     <div class="card">
       <span class="badge">Monitoria</span>
@@ -433,7 +413,7 @@
 <div class="divider"></div>
 
 <section id="pesquisa">
-  <div class="eyebrow reveal">Pesquisa & Extensão</div>
+  <div class="eyebrow reveal">04 · Pesquisa</div>
   <h2 class="section-title reveal">Pesquisa e publicação</h2>
   <p class="section-sub reveal">Sistemas de RF, gêmeos digitais e uma publicação científica derivada desse trabalho.</p>
 
@@ -442,7 +422,7 @@
       <span class="badge">Pesquisa</span>
       <h3>Rectenna para monitoramento biomédico</h3>
       <span class="meta">Em andamento</span>
-      <p>Desenvolvimento de uma rectenna integrada a uma tag RFID UHF passiva para monitoramento biomédico de longo alcance, com foco em captação de energia de RF (RF energy harvesting) e simulação.</p>
+      <p>Rectenna integrada a uma tag RFID UHF passiva para monitoramento biomédico de longo alcance, com foco em captação de energia de RF (RF energy harvesting) e simulação.</p>
     </div>
     <div class="card">
       <span class="badge">Pesquisa</span>
@@ -466,13 +446,13 @@
 <div class="divider"></div>
 
 <section id="github">
-  <div class="eyebrow reveal">Código</div>
+  <div class="eyebrow reveal">05 · Código</div>
   <h2 class="section-title reveal">Projetos de desenvolvimento</h2>
   <p class="section-sub reveal">Machine learning aplicado a problemas de engenharia elétrica.</p>
 
-  <div class="grid grid-2 reveal">
+  <div class="grid grid-3 reveal">
     <div class="card">
-      <h3>Diagnóstico de Acionamentos Elétricos com ML</h3>
+      <h3>Diagnóstico de Acionamentos Elétricos</h3>
       <p>Classificação de condições de acionamentos elétricos com Decision Tree, KNN, SVM e Random Forest, com rastreamento de experimentos via MLflow.</p>
       <div class="tag-row"><span class="tag">Python</span><span class="tag">Scikit-Learn</span><span class="tag">MLflow</span></div>
       <a class="gh-link" href="https://github.com/hugovieiraz/diagnostico-acionamentos-eletricos-ml" target="_blank" rel="noopener">↗ Ver no GitHub</a>
@@ -489,18 +469,12 @@
       <div class="tag-row"><span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">Matplotlib</span></div>
       <a class="gh-link" href="https://github.com/hugovieiraz/appliances-energy-prediction" target="_blank" rel="noopener">↗ Ver no GitHub</a>
     </div>
-    <div class="card">
-      <h3>Métodos Numéricos — Cálculo Numérico</h3>
-      <p>Repositório com todos os métodos numéricos da disciplina, criado como material de apoio durante a monitoria.</p>
-      <div class="tag-row"><span class="tag">Python</span><span class="tag">Métodos Numéricos</span></div>
-      <a class="gh-link" href="https://github.com/hugovieiraz/Calculo-Numerico" target="_blank" rel="noopener">↗ Ver no GitHub</a>
-    </div>
   </div>
 
   <div class="gh-banner reveal">
     <a href="https://github.com/hugovieiraz" target="_blank" rel="noopener">
       <svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
-      github.com/hugovieiraz
+      Ver todos os repositórios
     </a>
   </div>
 </section>
@@ -508,12 +482,12 @@
 <div class="divider"></div>
 
 <section id="vida">
-  <div class="eyebrow reveal">Atividades</div>
+  <div class="eyebrow reveal">06 · Vivências</div>
   <h2 class="section-title reveal">Atividades e eventos</h2>
-  <p class="section-sub reveal">Projetos de extensão, eventos e atividades acadêmicas.</p>
+  <p class="section-sub reveal">Extensão universitária, eventos acadêmicos e atividades fora da graduação.</p>
 
-  <h3 class="reveal" style="font-size:1.15rem; margin:6px 0 14px;">PES — IEEE Power &amp; Energy Society</h3>
-  <p class="reveal" style="color:var(--ink-dim); margin-bottom:20px; font-size:0.95rem;">Membro do ramo estudantil PES (2023–2025).</p>
+  <h3 class="sub-head reveal" style="margin-top:8px;">PES — IEEE Power &amp; Energy Society</h3>
+  <p class="sub-note reveal">Membro do ramo estudantil PES (2023–2025).</p>
   <div class="grid grid-2 reveal">
     <div class="photo">
       <img src="images/pes-1.jpg" alt="Equipe do PES" onerror="this.parentElement.classList.add('broken')">
@@ -527,8 +501,8 @@
     </div>
   </div>
 
-  <h3 class="reveal" style="font-size:1.15rem; margin:36px 0 14px;">MemorIA — jogo educacional com IA</h3>
-  <p class="reveal" style="color:var(--ink-dim); margin-bottom:20px; font-size:0.95rem;">Projeto de extensão: um jogo sério que usa IA generativa e RAG para ajudar estudantes a revisar conteúdos de forma interativa.</p>
+  <h3 class="sub-head reveal">MemorIA — jogo educacional com IA</h3>
+  <p class="sub-note reveal">Projeto de extensão: um jogo sério que usa IA generativa e RAG para ajudar estudantes a revisar conteúdos de forma interativa.</p>
   <div class="grid grid-2 reveal">
     <div class="photo">
       <img src="images/memoria-1.jpg" alt="Equipe do projeto MemorIA" onerror="this.parentElement.classList.add('broken')">
@@ -542,8 +516,8 @@
     </div>
   </div>
 
-  <h3 class="reveal" style="font-size:1.15rem; margin:36px 0 14px;">Curso de Robótica — ECIT</h3>
-  <p class="reveal" style="color:var(--ink-dim); margin-bottom:20px; font-size:0.95rem;">Ensinando eletrônica e programação para alunos do ensino médio.</p>
+  <h3 class="sub-head reveal">Curso de Robótica — ECIT</h3>
+  <p class="sub-note reveal">Eletrônica e programação para alunos do ensino médio.</p>
   <div class="grid grid-4 reveal">
     <div class="photo"><img src="images/robotica-1.jpg" alt="Curso de robótica" onerror="this.parentElement.classList.add('broken')"><div class="ph-fallback"><span>Foto em breve</span></div></div>
     <div class="photo"><img src="images/robotica-2.jpg" alt="Curso de robótica" onerror="this.parentElement.classList.add('broken')"><div class="ph-fallback"><span>Foto em breve</span></div></div>
@@ -551,59 +525,33 @@
     <div class="photo"><img src="images/robotica-4.jpg" alt="Curso de robótica" onerror="this.parentElement.classList.add('broken')"><div class="ph-fallback"><span>Foto em breve</span></div></div>
   </div>
 
-  <h3 class="reveal" style="font-size:1.15rem; margin:36px 0 14px;">IMOC 2025</h3>
-  <p class="reveal" style="color:var(--ink-dim); margin-bottom:20px; font-size:0.95rem;">International Microwave and Optoelectronics Conference — uma imersão e tanto.</p>
+  <h3 class="sub-head reveal">IMOC 2025</h3>
+  <p class="sub-note reveal">International Microwave and Optoelectronics Conference.</p>
   <div class="grid grid-3 reveal">
     <div class="photo"><img src="images/imoc-3.jpg" alt="IMOC 2025 — confraternização" onerror="this.parentElement.classList.add('broken')"><div class="ph-fallback"><span>Foto em breve</span></div></div>
     <div class="photo"><img src="images/imoc-2.jpg" alt="IMOC 2025 — bancada" onerror="this.parentElement.classList.add('broken')"><div class="ph-fallback"><span>Foto em breve</span></div></div>
     <div class="photo"><img src="images/imoc-1.jpg" alt="IMOC 2025 — apresentação" onerror="this.parentElement.classList.add('broken')"><div class="ph-fallback"><span>Foto em breve</span></div></div>
   </div>
-
-  <div class="reveal" style="margin-top:40px;">
-    <h3 style="font-size:1.15rem; margin-bottom:10px;">Idiomas</h3>
-    <div class="lang-row">
-      <div class="lang-pill">Português <span class="lvl">NATIVO</span></div>
-      <div class="lang-pill">Inglês <span class="lvl">B1 — INTERMEDIÁRIO</span></div>
-      <div class="lang-pill">Francês <span class="lvl">NOÇÕES</span></div>
-    </div>
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<section id="certificados">
-  <div class="eyebrow reveal">Cursos</div>
-  <h2 class="section-title reveal">Certificados</h2>
-  <p class="section-sub reveal">Capacitações que concluí recentemente.</p>
-
-  <div class="grid grid-3 reveal">
-    <div class="card cert-card"><h3>Fundamentos da Inteligência Artificial</h3><span class="meta">40h · mai/2026</span></div>
-    <div class="card cert-card"><h3>Inteligência Artificial Aplicada</h3><span class="meta">30h · jun/2026</span></div>
-    <div class="card cert-card"><h3>Aprendizado Avançado de Máquina</h3><span class="meta">30h · mai/2026</span></div>
-    <div class="card cert-card"><h3>Análise de Dados</h3><span class="meta">jun/2026</span></div>
-    <div class="card cert-card"><h3>Comunicação Assertiva no Trabalho</h3><span class="meta">nov/2025</span></div>
-    <div class="card cert-card"><h3>Inglês — Intermediário (B1)</h3><span class="meta">mai/2025</span></div>
-    <div class="card cert-card"><h3>Python Básico</h3><span class="meta">Curso introdutório</span></div>
-    <div class="card cert-card"><h3>Planejamento</h3><span class="meta">Capacitação</span></div>
-    <div class="card cert-card"><h3>Empreendedorismo</h3><span class="meta">Capacitação</span></div>
-  </div>
 </section>
 
 <section style="padding-bottom:10px;">
   <div class="contact-box reveal" id="contato">
-    <div class="eyebrow" style="justify-content:center;">Contato</div>
+    <div class="eyebrow" style="justify-content:center;">07 · Contato</div>
     <h2>Vamos conversar?</h2>
     <p>Estou aberto a orientação acadêmica, colaborações em pesquisa e novos projetos.</p>
     <div class="hero-cta" style="justify-content:center;">
-      <a class="btn btn-primary" href="mailto:victor.hugo.tavares@ee.ufcg.edu.br">victor.hugo.tavares@ee.ufcg.edu.br</a>
-      <a class="btn btn-ghost" href="http://lattes.cnpq.br/9244453546077602" target="_blank" rel="noopener">Currículo Lattes</a>
-      <a class="btn btn-ghost" href="https://github.com/hugovieiraz" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn btn-primary" href="mailto:victor.hugo.tavares@ee.ufcg.edu.br">Enviar e-mail</a>
     </div>
   </div>
 </section>
 
 <footer>
-  Victor Hugo Vieira Tavares · Engenharia Elétrica · UFCG · Campina Grande, PB
+  <div class="foot-links">
+    <a href="mailto:victor.hugo.tavares@ee.ufcg.edu.br">E-mail</a>
+    <a href="http://lattes.cnpq.br/9244453546077602" target="_blank" rel="noopener">Lattes</a>
+    <a href="https://github.com/hugovieiraz" target="_blank" rel="noopener">GitHub</a>
+  </div>
+  <div>Victor Hugo Vieira Tavares · Engenharia Elétrica · UFCG · Campina Grande, PB</div>
 </footer>
 
 <script>
